@@ -14,6 +14,7 @@
 		00F7DFF71FB716EB00AFD6A5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00F7DFF51FB716EB00AFD6A5 /* LaunchScreen.storyboard */; };
 		00F7E0021FB716EB00AFD6A5 /* SmackTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F7E0011FB716EB00AFD6A5 /* SmackTests.swift */; };
 		00F7E00D1FB716EB00AFD6A5 /* SmackUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F7E00C1FB716EB00AFD6A5 /* SmackUITests.swift */; };
+		00F7E01E1FB7190300AFD6A5 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 00F7E01D1FB7190300AFD6A5 /* SWRevealViewController.m */; };
 		2C5C9464737B95243C34CE0C /* Pods_Smack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E540E24132698A6C1D5C535 /* Pods_Smack.framework */; };
 		4C817956263C564DA2F87125 /* Pods_SmackUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50454E0AA390CF3D55B5CB75 /* Pods_SmackUITests.framework */; };
 		C1883CDAEF3BFC023E67EAA3 /* Pods_SmackTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35E4AA6289BBFCBA00930CAC /* Pods_SmackTests.framework */; };
@@ -50,6 +51,9 @@
 		00F7E0081FB716EB00AFD6A5 /* SmackUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SmackUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00F7E00C1FB716EB00AFD6A5 /* SmackUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmackUITests.swift; sourceTree = "<group>"; };
 		00F7E00E1FB716EB00AFD6A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		00F7E01B1FB7190200AFD6A5 /* Smack-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Smack-Bridging-Header.h"; sourceTree = "<group>"; };
+		00F7E01C1FB7190300AFD6A5 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
+		00F7E01D1FB7190300AFD6A5 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		1C05268FA74ED486464120C4 /* Pods-SmackTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmackTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SmackTests/Pods-SmackTests.debug.xcconfig"; sourceTree = "<group>"; };
 		35E4AA6289BBFCBA00930CAC /* Pods_SmackTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SmackTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		50454E0AA390CF3D55B5CB75 /* Pods_SmackUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SmackUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -114,6 +118,7 @@
 		00F7DFEB1FB716EB00AFD6A5 /* Smack */ = {
 			isa = PBXGroup;
 			children = (
+				00F7E01A1FB718D700AFD6A5 /* Supporting Files */,
 				00F7DFEC1FB716EB00AFD6A5 /* AppDelegate.swift */,
 				00F7DFEE1FB716EB00AFD6A5 /* ViewController.swift */,
 				00F7DFF01FB716EB00AFD6A5 /* Main.storyboard */,
@@ -140,6 +145,16 @@
 				00F7E00E1FB716EB00AFD6A5 /* Info.plist */,
 			);
 			path = SmackUITests;
+			sourceTree = "<group>";
+		};
+		00F7E01A1FB718D700AFD6A5 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				00F7E01C1FB7190300AFD6A5 /* SWRevealViewController.h */,
+				00F7E01D1FB7190300AFD6A5 /* SWRevealViewController.m */,
+				00F7E01B1FB7190200AFD6A5 /* Smack-Bridging-Header.h */,
+			);
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		516D1AE3A06BBA9B12A12A71 /* Pods */ = {
@@ -242,6 +257,7 @@
 				TargetAttributes = {
 					00F7DFE81FB716EB00AFD6A5 = {
 						CreatedOnToolsVersion = 9.1;
+						LastSwiftMigration = 0910;
 						ProvisioningStyle = Automatic;
 					};
 					00F7DFFC1FB716EB00AFD6A5 = {
@@ -448,6 +464,7 @@
 			files = (
 				00F7DFEF1FB716EB00AFD6A5 /* ViewController.swift in Sources */,
 				00F7DFED1FB716EB00AFD6A5 /* AppDelegate.swift in Sources */,
+				00F7E01E1FB7190300AFD6A5 /* SWRevealViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -614,12 +631,15 @@
 			baseConfigurationReference = 6E52EACC3AD96B462C8FD9C0 /* Pods-Smack.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9GNF787574;
 				INFOPLIST_FILE = Smack/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.fiendishcorporation.Smack;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Smack/Supporting Files/Smack-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -630,12 +650,14 @@
 			baseConfigurationReference = 688A2FF323808A060D197D06 /* Pods-Smack.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9GNF787574;
 				INFOPLIST_FILE = Smack/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.fiendishcorporation.Smack;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Smack/Supporting Files/Smack-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
