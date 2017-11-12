@@ -31,9 +31,17 @@ class CreateAccountVC: UIViewController {
             
             if success {
                 print("Registered User!")
+                AuthService.instance.loginUser(email: email, password: pass, completion: { (success) in
+                    
+                    if success {
+                        print("Logged in user", AuthService.instance.authToken)
+                    }
+                })
             }
             
         }
+        
+        
         
     }
     
