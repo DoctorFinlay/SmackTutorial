@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		0005A16F1FBB3D830007A975 /* README.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0005A16E1FBB3D830007A975 /* README.swift */; };
+		0005A1711FBB8FA70007A975 /* MessageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0005A1701FBB8FA70007A975 /* MessageService.swift */; };
+		0005A1731FBB8FD70007A975 /* Channel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0005A1721FBB8FD70007A975 /* Channel.swift */; };
 		0034FF191FBAF12F0005433F /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0034FF171FBAF12F0005433F /* ProfileVC.swift */; };
 		0034FF1A1FBAF12F0005433F /* ProfileVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0034FF181FBAF12F0005433F /* ProfileVC.xib */; };
 		007E37661FB8943800A480F5 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007E37651FB8943800A480F5 /* AuthService.swift */; };
@@ -53,6 +55,8 @@
 
 /* Begin PBXFileReference section */
 		0005A16E1FBB3D830007A975 /* README.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = README.swift; sourceTree = "<group>"; };
+		0005A1701FBB8FA70007A975 /* MessageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageService.swift; sourceTree = "<group>"; };
+		0005A1721FBB8FD70007A975 /* Channel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Channel.swift; sourceTree = "<group>"; };
 		0034FF171FBAF12F0005433F /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
 		0034FF181FBAF12F0005433F /* ProfileVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileVC.xib; sourceTree = "<group>"; };
 		007E37651FB8943800A480F5 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
@@ -134,6 +138,7 @@
 			children = (
 				007E37651FB8943800A480F5 /* AuthService.swift */,
 				007E37691FB8AC6F00A480F5 /* UserDataService.swift */,
+				0005A1701FBB8FA70007A975 /* MessageService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -235,6 +240,7 @@
 		00F7E0211FB71BEA00AFD6A5 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				0005A1721FBB8FD70007A975 /* Channel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -559,6 +565,8 @@
 				007E37681FB8A2EE00A480F5 /* RoundedButton.swift in Sources */,
 				007E37701FB8E82F00A480F5 /* CircleImage.swift in Sources */,
 				0005A16F1FBB3D830007A975 /* README.swift in Sources */,
+				0005A1711FBB8FA70007A975 /* MessageService.swift in Sources */,
+				0005A1731FBB8FD70007A975 /* Channel.swift in Sources */,
 				00F7E0231FB71C0D00AFD6A5 /* ChatVC.swift in Sources */,
 				007E376A1FB8AC6F00A480F5 /* UserDataService.swift in Sources */,
 				00F7E02E1FB7325200AFD6A5 /* CreateAccountVC.swift in Sources */,

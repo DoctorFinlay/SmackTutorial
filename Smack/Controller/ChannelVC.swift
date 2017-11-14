@@ -27,6 +27,7 @@ class ChannelVC: UIViewController {
     
     
     override func viewDidAppear(_ animated: Bool) {
+        //Makes sure user info is retrieved if user is logged in
         setupUserInfo()
     }
     
