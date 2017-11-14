@@ -71,7 +71,7 @@
                                     <action selector="loginBtnPressed:" destination="KhK-fj-FnZ" eventType="touchUpInside" id="2YJ-kI-mIp"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="menuProfileIcon" translatesAutoresizingMaskIntoConstraints="NO" id="DY5-qO-eaw">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="menuProfileIcon" translatesAutoresizingMaskIntoConstraints="NO" id="DY5-qO-eaw" customClass="CircleImage" customModule="Smack" customModuleProvider="target">
                                 <rect key="frame" x="10" y="572" width="75" height="75"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="75" id="18r-lr-aoU"/>
@@ -135,6 +135,7 @@
                     </view>
                     <connections>
                         <outlet property="loginBtn" destination="8BF-eI-Ivg" id="SQO-rn-cM6"/>
+                        <outlet property="userImg" destination="DY5-qO-eaw" id="Hvc-aR-Pho"/>
                         <segue destination="j9X-Gr-I8z" kind="show" identifier="toLogin" id="f59-4b-g4d"/>
                     </connections>
                 </viewController>
@@ -174,6 +175,9 @@
                                         <real key="value" value="5"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="loginPressed:" destination="j9X-Gr-I8z" eventType="touchUpInside" id="WD9-cr-iXp"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LjZ-jn-hW9">
                                 <rect key="frame" x="62.5" y="346" width="250" height="26"/>
@@ -242,6 +246,10 @@
                                     </label>
                                 </subviews>
                             </stackView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="u6W-V7-ylx">
+                                <rect key="frame" x="169" y="215" width="37" height="37"/>
+                                <color key="color" red="0.2901960784" green="0.30196078430000001" blue="0.84705882349999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -252,6 +260,8 @@
                             <constraint firstItem="gxg-Ri-7gg" firstAttribute="trailing" secondItem="ahd-sk-NlI" secondAttribute="trailing" constant="10" id="biQ-M6-efd"/>
                             <constraint firstItem="ahd-sk-NlI" firstAttribute="top" secondItem="gxg-Ri-7gg" secondAttribute="top" constant="8" id="eDy-mZ-zag"/>
                             <constraint firstItem="xgh-Jo-L5O" firstAttribute="centerX" secondItem="lwg-Em-BZe" secondAttribute="centerX" id="iXs-lz-J36"/>
+                            <constraint firstItem="u6W-V7-ylx" firstAttribute="centerY" secondItem="lwg-Em-BZe" secondAttribute="centerY" constant="-100" id="mVJ-NL-gQc"/>
+                            <constraint firstItem="u6W-V7-ylx" firstAttribute="centerX" secondItem="lwg-Em-BZe" secondAttribute="centerX" id="poB-Rm-tkz"/>
                             <constraint firstItem="Gcy-f5-SJ4" firstAttribute="centerX" secondItem="lwg-Em-BZe" secondAttribute="centerX" id="ux2-Hc-a2i"/>
                             <constraint firstItem="LjZ-jn-hW9" firstAttribute="centerX" secondItem="lwg-Em-BZe" secondAttribute="centerX" id="vet-z1-cxv"/>
                             <constraint firstItem="xgh-Jo-L5O" firstAttribute="top" secondItem="gxg-Ri-7gg" secondAttribute="top" constant="60" id="wtT-ET-K7f"/>
@@ -260,6 +270,9 @@
                         <viewLayoutGuide key="safeArea" id="gxg-Ri-7gg"/>
                     </view>
                     <connections>
+                        <outlet property="passwordTxt" destination="YL4-c9-wFt" id="dNH-ql-VPE"/>
+                        <outlet property="spinner" destination="u6W-V7-ylx" id="ZpW-6W-uW1"/>
+                        <outlet property="userNameTxt" destination="ErD-75-P5B" id="CB8-cP-YUq"/>
                         <segue destination="KdW-VQ-Nfd" kind="show" identifier="toCreateAccount" id="eIL-Av-SsI"/>
                     </connections>
                 </viewController>

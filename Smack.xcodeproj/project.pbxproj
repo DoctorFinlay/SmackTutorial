@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0005A16F1FBB3D830007A975 /* README.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0005A16E1FBB3D830007A975 /* README.swift */; };
+		0034FF191FBAF12F0005433F /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0034FF171FBAF12F0005433F /* ProfileVC.swift */; };
+		0034FF1A1FBAF12F0005433F /* ProfileVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0034FF181FBAF12F0005433F /* ProfileVC.xib */; };
 		007E37661FB8943800A480F5 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007E37651FB8943800A480F5 /* AuthService.swift */; };
 		007E37681FB8A2EE00A480F5 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007E37671FB8A2EE00A480F5 /* RoundedButton.swift */; };
 		007E376A1FB8AC6F00A480F5 /* UserDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007E37691FB8AC6F00A480F5 /* UserDataService.swift */; };
@@ -49,6 +52,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0005A16E1FBB3D830007A975 /* README.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = README.swift; sourceTree = "<group>"; };
+		0034FF171FBAF12F0005433F /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
+		0034FF181FBAF12F0005433F /* ProfileVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileVC.xib; sourceTree = "<group>"; };
 		007E37651FB8943800A480F5 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		007E37671FB8A2EE00A480F5 /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
 		007E37691FB8AC6F00A480F5 /* UserDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataService.swift; sourceTree = "<group>"; };
@@ -115,6 +121,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0034FF1B1FBAF1530005433F /* XIBs */ = {
+			isa = PBXGroup;
+			children = (
+				0034FF181FBAF12F0005433F /* ProfileVC.xib */,
+			);
+			path = XIBs;
+			sourceTree = "<group>";
+		};
 		007E37641FB8941E00A480F5 /* Services */ = {
 			isa = PBXGroup;
 			children = (
@@ -149,6 +163,7 @@
 		00F7DFEB1FB716EB00AFD6A5 /* Smack */ = {
 			isa = PBXGroup;
 			children = (
+				0034FF1B1FBAF1530005433F /* XIBs */,
 				007E37641FB8941E00A480F5 /* Services */,
 				00F7E0281FB72CFC00AFD6A5 /* Utilities */,
 				00F7E0211FB71BEA00AFD6A5 /* Model */,
@@ -160,6 +175,7 @@
 				00F7DFF31FB716EB00AFD6A5 /* Assets.xcassets */,
 				00F7DFF51FB716EB00AFD6A5 /* LaunchScreen.storyboard */,
 				00F7DFF81FB716EB00AFD6A5 /* Info.plist */,
+				0005A16E1FBB3D830007A975 /* README.swift */,
 			);
 			path = Smack;
 			sourceTree = "<group>";
@@ -200,6 +216,7 @@
 				00F7E02B1FB7309B00AFD6A5 /* LoginVC.swift */,
 				00F7E02D1FB7325200AFD6A5 /* CreateAccountVC.swift */,
 				007E376B1FB8DAA400A480F5 /* AvatarPickerVC.swift */,
+				0034FF171FBAF12F0005433F /* ProfileVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -370,6 +387,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0034FF1A1FBAF12F0005433F /* ProfileVC.xib in Resources */,
 				00F7DFF71FB716EB00AFD6A5 /* LaunchScreen.storyboard in Resources */,
 				00F7DFF41FB716EB00AFD6A5 /* Assets.xcassets in Resources */,
 				00F7DFF21FB716EB00AFD6A5 /* Main.storyboard in Resources */,
@@ -535,10 +553,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0034FF191FBAF12F0005433F /* ProfileVC.swift in Sources */,
 				00F7E0251FB71C1C00AFD6A5 /* ChannelVC.swift in Sources */,
 				007E376C1FB8DAA400A480F5 /* AvatarPickerVC.swift in Sources */,
 				007E37681FB8A2EE00A480F5 /* RoundedButton.swift in Sources */,
 				007E37701FB8E82F00A480F5 /* CircleImage.swift in Sources */,
+				0005A16F1FBB3D830007A975 /* README.swift in Sources */,
 				00F7E0231FB71C0D00AFD6A5 /* ChatVC.swift in Sources */,
 				007E376A1FB8AC6F00A480F5 /* UserDataService.swift in Sources */,
 				00F7E02E1FB7325200AFD6A5 /* CreateAccountVC.swift in Sources */,
