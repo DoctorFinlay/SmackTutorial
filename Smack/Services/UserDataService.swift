@@ -75,6 +75,8 @@ class UserDataService {
         AuthService.instance.userEmail = ""
         AuthService.instance.authToken = ""
         
+        MessageService.instance.clearChannels()
+        MessageService.instance.clearMessages()
     }
     
     
