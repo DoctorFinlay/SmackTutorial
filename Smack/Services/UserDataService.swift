@@ -64,6 +64,11 @@ class UserDataService {
         return newUIColor
     }
     
+    func setUserName(name: String) {
+        self.name = name
+    }
+    
+    
     func logoutUser() {
         id = ""
         avatarName = ""

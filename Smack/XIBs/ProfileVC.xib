@@ -6,12 +6,14 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
         <array key="HelveticaNeue.ttc">
+            <string>HelveticaNeue</string>
             <string>HelveticaNeue-Bold</string>
             <string>HelveticaNeue-Medium</string>
         </array>
@@ -20,7 +22,9 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ProfileVC" customModule="Smack" customModuleProvider="target">
             <connections>
                 <outlet property="bgView" destination="PiX-Vd-htx" id="0LV-NZ-Emx"/>
+                <outlet property="changeUserNameTxtField" destination="2Q8-QS-A2y" id="4E2-84-liI"/>
                 <outlet property="profileImage" destination="J5C-K6-CMl" id="7f3-L2-QCb"/>
+                <outlet property="setButton" destination="z3s-Lj-xaB" id="Kdb-DT-NGq"/>
                 <outlet property="userEmail" destination="FPf-i0-Yxa" id="muN-De-tB9"/>
                 <outlet property="userName" destination="X4T-vH-NzQ" id="gwE-a1-9rJ"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -36,7 +40,7 @@
                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oyc-9y-ipr" userLabel="Front view">
-                    <rect key="frame" x="20" y="153.5" width="335" height="360"/>
+                    <rect key="frame" x="20" y="53.5" width="335" height="360"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a7d-ew-dcb">
                             <rect key="frame" x="299" y="8" width="28" height="28"/>
@@ -46,7 +50,7 @@
                             </connections>
                         </button>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="hOv-4p-vsd">
-                            <rect key="frame" x="104" y="64" width="127" height="192.5"/>
+                            <rect key="frame" x="104.5" y="64" width="127" height="192.5"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Profile" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4qp-aC-r48">
                                     <rect key="frame" x="0.0" y="0.0" width="127" height="27.5"/>
@@ -85,6 +89,38 @@
                                 <action selector="logoutPressed:" destination="-1" eventType="touchUpInside" id="2im-sa-tGP"/>
                             </connections>
                         </button>
+                        <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="qJe-nx-269">
+                            <rect key="frame" x="17.5" y="264" width="301" height="33"/>
+                            <subviews>
+                                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Change username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2Q8-QS-A2y">
+                                    <rect key="frame" x="0.0" y="0.0" width="266" height="33"/>
+                                    <nil key="textColor"/>
+                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                    <connections>
+                                        <action selector="usernameTxtFieldChanged:" destination="-1" eventType="editingChanged" id="DSy-ER-U5g"/>
+                                    </connections>
+                                </textField>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z3s-Lj-xaB">
+                                    <rect key="frame" x="271" y="0.0" width="30" height="33"/>
+                                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                                    <state key="normal" title="Set">
+                                        <color key="titleColor" red="0.2901960784" green="0.30196078430000001" blue="0.84705882349999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </state>
+                                    <state key="disabled">
+                                        <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="changeUsernamePressed:" destination="-1" eventType="touchUpInside" id="l7M-ku-Viq"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <constraints>
+                                <constraint firstItem="2Q8-QS-A2y" firstAttribute="top" secondItem="qJe-nx-269" secondAttribute="top" id="9dD-E1-MVl"/>
+                                <constraint firstItem="2Q8-QS-A2y" firstAttribute="leading" secondItem="qJe-nx-269" secondAttribute="leading" id="Eqq-yI-m5t"/>
+                                <constraint firstAttribute="trailing" secondItem="z3s-Lj-xaB" secondAttribute="trailing" id="XQc-Ff-pCW"/>
+                            </constraints>
+                        </stackView>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
@@ -93,14 +129,17 @@
                         <constraint firstItem="hOv-4p-vsd" firstAttribute="centerY" secondItem="oyc-9y-ipr" secondAttribute="centerY" constant="-20" id="euf-BF-JKa"/>
                         <constraint firstItem="a7d-ew-dcb" firstAttribute="top" secondItem="oyc-9y-ipr" secondAttribute="top" constant="8" id="fdk-I9-Gxj"/>
                         <constraint firstAttribute="trailing" secondItem="a7d-ew-dcb" secondAttribute="trailing" constant="8" id="kNY-tv-N2b"/>
+                        <constraint firstItem="qJe-nx-269" firstAttribute="width" secondItem="oyc-9y-ipr" secondAttribute="width" multiplier="0.9" id="mfS-xT-U5n"/>
                         <constraint firstAttribute="bottom" secondItem="pTg-Vr-6mC" secondAttribute="bottom" constant="8" id="qav-Oj-ybA"/>
                         <constraint firstItem="pTg-Vr-6mC" firstAttribute="centerX" secondItem="oyc-9y-ipr" secondAttribute="centerX" id="rj6-O5-kYl"/>
+                        <constraint firstItem="qJe-nx-269" firstAttribute="top" secondItem="hOv-4p-vsd" secondAttribute="bottom" constant="8" id="xdL-5g-sLf"/>
+                        <constraint firstItem="qJe-nx-269" firstAttribute="centerX" secondItem="oyc-9y-ipr" secondAttribute="centerX" id="zRD-8M-AWq"/>
                     </constraints>
                 </view>
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
-                <constraint firstItem="oyc-9y-ipr" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="5M5-di-b5w"/>
+                <constraint firstItem="oyc-9y-ipr" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" constant="-100" id="5M5-di-b5w"/>
                 <constraint firstItem="oyc-9y-ipr" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="cpr-fn-E0d"/>
                 <constraint firstAttribute="trailing" secondItem="PiX-Vd-htx" secondAttribute="trailing" id="eMT-fv-Co0"/>
                 <constraint firstAttribute="top" secondItem="PiX-Vd-htx" secondAttribute="top" id="iAA-3O-awP"/>

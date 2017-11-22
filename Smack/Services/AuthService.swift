@@ -164,7 +164,45 @@ class AuthService {
             print(error)
         }
     }
+    
+    
+    func changeUsername(newUsername: String, completion: @escaping CompletionHandler) {
+        print("change username is running")
+        
+        let body = ["name" : "\(newUsername)"]
+        
+        let fullUrl = "\(URL_CHANGE_USERNAME)\(UserDataService.instance.id)"
+        
+        Alamofire.request(fullUrl, method: .put, parameters: body, encoding: JSONEncoding.default, headers: BEARER_HEADER).responseJSON { (response) in
+            
+            if response.result.error == nil {
+                guard let data = response.data else { return }
+                print(data)
+                
+                do {
+                    let json = try JSON(data: data)
+                    let message = json["message"].stringValue
+                    if message == "User info updated" {
+                        completion(true)
+                    }
+                } catch {
+                    print(error)
+                }
+                
+                
+            } else {
+                debugPrint(response.result.error as Any)
+                completion(false)
+            }
+        }
+    }
+    
+    
 
 
+    
+    
+    
+    
 
 }
